@@ -6,19 +6,11 @@ require 'json'
 require 'open-uri'
 
 class MoviePosterDb
-  attr_accessor :host
+  HOST = 'http://api.movieposterdb.com/json.inc.php'
   
-  def initialize
-    @host = 'http://api.movieposterdb.com/json.inc.php'
+  
+  def self.find_by_imdb_id(imdb_id, width)
+    JSON.parse(open("#{HOST}?imdb=#{imdb_id.gsub(/tt/,'')}&width=#{width}").read)
   end
-  
-  def http_get(url)
-    open(url).read
-  end
-  
-  def find_by_imdb_id(imdb_id, width)
-    JSON.parse(http_get("#{@host}?imdb=#{imdb_id.gsub(/tt/,'')}&width=#{width}"))
-  end
-  
   
 end

@@ -1,17 +1,13 @@
 require 'movieposterdb'
 
 describe MoviePosterDb do
-  before do
-    @mpdb = MoviePosterDb.new
-  end
-  
   it "should have the right host" do
-    @mpdb.host.should == "http://api.movieposterdb.com/json.inc.php"
+    MoviePosterDb::HOST.should == "http://api.movieposterdb.com/json.inc.php"
   end
   
   describe "when searching via imdb id" do
     before do
-      @result = @mpdb.find_by_imdb_id("tt0421715", 300)
+      @result = MoviePosterDb.find_by_imdb_id("tt0421715", 300)
     end
     
     it "should return the movie poster" do
@@ -22,7 +18,7 @@ describe MoviePosterDb do
 
   describe "when searching via imdb id and id is bad" do
     before do
-      @result = @mpdb.find_by_imdb_id("tt04217d15", 300)
+      @result = MoviePosterDb.find_by_imdb_id("tt04217d15", 300)
     end
     
     it "should not have the movie poster" do

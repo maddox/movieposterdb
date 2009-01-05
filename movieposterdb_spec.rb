@@ -11,7 +11,8 @@ describe MoviePosterDb do
   
   describe "when searching via imdb id" do
     before do
-      @result = @mpdb.find_by_imdb_id("tt0977214", 300)
+      @result = @mpdb.find_by_imdb_id("tt0421715", 300)
+      puts @result.inspect
     end
     
     it "should return the movie poster" do

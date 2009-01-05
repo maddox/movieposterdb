@@ -1,15 +1,6 @@
 ####### The movieposterdb API
 ### http://movieposterdb.com
 
-# tvdb = Tvdb.new
-# results = tvdb.search("Scrubs")
-# 
-# series = results.first
-# series.banners
-# 
-# series.banners.each { |e| puts e.inspect }
-# series.episodes.each { |e| puts e.inspect }
-
 require 'rubygems'
 require 'json'
 require 'open-uri'

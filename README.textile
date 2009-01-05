@@ -1,0 +1,9 @@
+h1. MoviePosterDB
+
+Another library built out of necessity for Pyrot
+
+h2. How to do it
+
+<code>mpdb = MoviePosterDb.new</code>
+<code>result = mpdb.find_by_imdb_id("tt0421715")</code>
+<code>result["imageurl"] => "http://api.movieposterdb.com/cache/15/421715_300.jpg"</code>

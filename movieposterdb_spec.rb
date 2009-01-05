@@ -1,4 +1,4 @@
-require 'movieposterdb'
+require 'movie_poster_db'
 
 describe MoviePosterDb do
   it "should have the right host" do

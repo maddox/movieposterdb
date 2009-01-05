@@ -1,9 +1,17 @@
 h1. MoviePosterDB
 
-Another library built out of necessity for Pyrot
+A simple ruby client for the MoviePosterDB api
 
 h2. How to do it
 
 <p><code>mpdb = MoviePosterDb.new</code></p>
 <p><code>result = mpdb.find_by_imdb_id("tt0421715")</code></p>
 <p><code>result["imageurl"] => "http://api.movieposterdb.com/cache/15/421715_300.jpg"</code></p>
+
+h2. Dependencies
+
+* json
+
+h2. License
+
+MIT, Duh.
